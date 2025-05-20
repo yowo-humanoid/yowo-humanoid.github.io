@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="description"
+        content="H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies">
+  <meta name="keywords" content="H2-COMPACT, Human–Humanoid Co-Manipulation, Adaptive Contact Trajectory Policies">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive
+    Contact Trajectory Policies</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            H<sup>2</sup>-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies
+          </h1>
+                    <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Anonymous,</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1tIOtJs7JFdc4Qxg7MHybvPd4ncDLBo-x/view?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Uploading Soon)</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe
+            width="100%"             
+            height="450"             
+            src="https://www.youtube.com/embed/Gf1FKu47lGo?autoplay=1&loop=1&playlist=Gf1FKu47lGo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--/ Paper video. -->
+
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a hierarchical policy-learning framework that enables a legged humanoid to cooperatively carry
+            extended loads with a human partner using only haptic cues for intent inference. At the upper tier, a lightweight behavior 
+            cloning network consumes six-axis force/torque streams from
+            dual wrist-mounted sensors and outputs whole-body planar
+            velocity commands that capture the leader's applied forces. At
+            the lower tier, a deep-reinforcement-learning policy—trained
+            under randomized payloads (0–3 kg) and friction conditions
+            in Isaac Gym and validated in MuJoCo and on a real Unitree G1—maps these high-level twists to stable, under-load
+            joint trajectories. By decoupling intent interpretation (force
+            → velocity) from legged locomotion (velocity → joints), our
+            method combines intuitive responsiveness to human inputs with
+            robust, load-adaptive walking. We collect training data without
+            motion-capture or markers—only synchronized RGB video and
+            F/T readings—employing SAM2 and WHAM to extract 3D
+            human pose and velocity. In real-world trials, our humanoid
+            achieves cooperative carry-and-move performance (completion
+            time, trajectory deviation, velocity synchrony, and follower force) on par with a blindfolded human-follower baseline.
+            This work is the first to demonstrate learned haptic guidance
+            fused with full-body legged control for fluid human–humanoid
+            co–manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Methodology</h2>
+
+        <!-- Re-rendering. -->
+        <div class="content has-text-centered">
+          <img
+            src="./static/images/methodology.png"
+            alt="Methodology Diagram"
+            style="max-width: 100%; height: auto;"
+          />
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <!-- Reinforcement Learning -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reinforcement Learning</h2>
+        <div class="content">
+          <div class="columns is-centered">
+            <div class="column">
+              <h3 class="title is-4 has-text-centered">Training RL policy with Load Adaptation</h3>
+              <img src="static/videos/before_rl.gif" alt="Before RL" style="width: 100%; height: 400px; object-fit: cover;">
+            </div>
+            <div class="column">
+              <h3 class="title is-4 has-text-centered"> After RL policy with Load Adaptation </h3>
+              <img src="static/videos/after_rl.gif" alt="After RL" style="width: 100%; height: 400px; object-fit: cover;">
+            </div>
+          </div>
+          <h3 class="title is-4 has-text-centered">Sim to Sim and Sim to Real Transfer</h3>
+          <div class="content has-text-centered">
+            <img src="./static/images/RL_overview.png" alt="RL Overview" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Collection -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Data Collection</h2>
+        <div class="content">
+          <div class="content has-text-centered">
+            <img src="./static/images/data_collection_mask.png" alt="Data Collection" style="max-width: 100%; height: auto;">
+          </div>
+          
+          <h3 class="title is-4">Data Preprocessing</h3>
+          <p>Data preprocessing with SAM2 and using WHAM for identifying pose and velocity</p>
+          <img src="static/videos/output.gif" alt="Data Preprocessing" style="width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Real World Demonstrations -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Real World Demonstrations</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/robot_full_images.jpg" alt="Robot Full Images" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="columns is-centered" style="margin-bottom: 3rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Evaluation</h2>
+        <div class="content">
+          <div class="publication-video" style="margin-bottom: 2rem;">
+            <iframe
+              width="100%"             
+              height="450"             
+              src="https://www.youtube.com/embed/fmw2blkLM3U?autoplay=1&loop=1&playlist=fmw2blkLM3U"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          
+          <div class="columns is-centered">
+            <div class="column">
+              <img src="./static/images/position_traj (2).png" alt="Position Tracking" style="max-width: 100%; height: auto;">
+              <p class="has-text-centered">Position tracking of the humanoid and human followers relative to the leader in both scenarios, along with the corresponding position error between the leader and each follower. Top: Motion along the x-axis. Bottom: Motion along the y-axis.</p>
+            </div>
+            <div class="column">
+              <img src="./static/images/vel_traj (2).png" alt="Velocity Tracking" style="max-width: 100%; height: auto;">
+              <p class="has-text-centered">Velocity error tracking between the leader and the corresponding humanoid or human follower in each case. Top: Tracking along the x-axis. Bottom: Tracking along the y-axis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Comanipulation -->
+    <!-- <div class="columns is-centered" style="margin-bottom: 3rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comanipulation</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/comanipulation.png" alt="Comanipulation" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>  -->
+
+
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{onsubmission,
+  author    = {},
+  title     = {H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies},
+  journal   = {},
+  year      = {2025},
+}</code></pre>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template borrowed from NeRFies <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .section {
+    margin-bottom: 4rem;
+  }
+  .title.is-4 {
+    font-size: 1.2rem;
+  }
+</style>
+
+</body>
+</html>
