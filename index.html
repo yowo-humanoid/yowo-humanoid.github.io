@@ -4,11 +4,10 @@
   
   <meta charset="utf-8">
   <meta name="description"
-        content="H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies">
-  <meta name="keywords" content="H2-COMPACT, Human–Humanoid Co-Manipulation, Adaptive Contact Trajectory Policies">
+        content="YOWO: You Only Watch Once - One-shot Humanoid Action Imitation">
+  <meta name="keywords" content="YOWO, Humanoid Action Imitation, One-shot Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive
-    Contact Trajectory Policies</title>
+  <title>YOWO: You Only Watch Once - One-shot Humanoid Action Imitation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -62,87 +61,10 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            H<sup>2</sup>-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies
+            YOWO: You Only Watch Once - One-shot Humanoid Action Imitation
           </h1>
-                    <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
-          </div>
-
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Anonymous,</span>
-            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://drive.google.com/file/d/1tIOtJs7JFdc4Qxg7MHybvPd4ncDLBo-x/view?usp=drive_link"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- Video Link. -->
-              <span class="link-block">
-                <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (Coming Soon)</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="" 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data (Uploading Soon)</span>
-                  </a>
-            </div>
+            <span class="author-block">Anonymous</span>
           </div>
         </div>
       </div>
@@ -153,189 +75,119 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe
-            width="100%"             
-            height="450"             
-            src="https://www.youtube.com/embed/Gf1FKu47lGo?autoplay=1&loop=1&playlist=Gf1FKu47lGo"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <!--/ Paper video. -->
-
-
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present a hierarchical policy-learning framework that enables a legged humanoid to cooperatively carry
-            extended loads with a human partner using only haptic cues for intent inference. At the upper tier, a lightweight behavior 
-            cloning network consumes six-axis force/torque streams from
-            dual wrist-mounted sensors and outputs whole-body planar
-            velocity commands that capture the leader's applied forces. At
-            the lower tier, a deep-reinforcement-learning policy—trained
-            under randomized payloads (0–3 kg) and friction conditions
-            in Isaac Gym and validated in MuJoCo and on a real Unitree G1—maps these high-level twists to stable, under-load
-            joint trajectories. By decoupling intent interpretation (force
-            → velocity) from legged locomotion (velocity → joints), our
-            method combines intuitive responsiveness to human inputs with
-            robust, load-adaptive walking. We collect training data without
-            motion-capture or markers—only synchronized RGB video and
-            F/T readings—employing SAM2 and WHAM to extract 3D
-            human pose and velocity. In real-world trials, our humanoid
-            achieves cooperative carry-and-move performance (completion
-            time, trajectory deviation, velocity synchrony, and follower force) on par with a blindfolded human-follower baseline.
-            This work is the first to demonstrate learned haptic guidance
-            fused with full-body legged control for fluid human–humanoid
-            co–manipulation.
+            One-shot humanoid action imitation aims to enable a humanoid robot to replicate a novel human motion after observing it only once. This capability is crucial for achieving natural and adaptive human-robot interaction in dynamic, real-world environments. Our approach leverages a combination of visual perception, action representation learning, and imitation policy modeling to map observed human poses to the robot's control space. By learning a shared latent space that captures the semantic structure of human and humanoid motions, our method generalizes across unseen actions and diverse body configurations. We demonstrate that the system can perform robust one-shot imitation from monocular videos or motion capture data, enabling humanoid robots to replicate complex behaviors such as gestures, locomotion, and object interactions with minimal prior experience.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+
+    <!-- Video Comparison -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Video Comparison</h2>
+        
+        <!-- Wash Window -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_wash_window.gif" alt="Without YOWO - Wash Window" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_wash_window.gif" alt="With YOWO - Wash Window" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Wash Window</h4>
+
+        <!-- Push Broom -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_push_broom.gif" alt="Without YOWO - Push Broom" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_push_broom.gif" alt="With YOWO - Push Broom" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Push Broom</h4>
+
+        <!-- Drink -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_drink.gif" alt="Without YOWO - Drink" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_drink.gif" alt="With YOWO - Drink" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Drink</h4>
+
+        <!-- Traffic -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_traffic.gif" alt="Without YOWO - Traffic" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_traffic.gif" alt="With YOWO - Traffic" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Traffic</h4>
+
+        <!-- Hand Signal -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_hand_signal.gif" alt="Without YOWO - Hand Signal" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_hand_signal.gif" alt="With YOWO - Hand Signal" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Hand Signal</h4>
+
+        <!-- Drink Smoke -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_drink_smoke.gif" alt="Without YOWO - Drink Smoke" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_drink_smoke.gif" alt="With YOWO - Drink Smoke" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">Drink Smoke</h4>
+
+        <!-- High Five -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">Without YOWO (Baseline)</h3>
+            <img src="static/videos/wo_high_five.gif" alt="Without YOWO - High Five" style="width: 100%; height: auto;">
+          </div>
+          <div class="column">
+            <h3 class="title is-4 has-text-centered">With YOWO</h3>
+            <img src="static/videos/w_high_five.gif" alt="With YOWO - High Five" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <h4 class="title is-5 has-text-centered" style="margin-top: -1rem; margin-bottom: 2rem;">High Five</h4>
+
+      </div>
+    </div>
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Methodology</h2>
-
-        <!-- Re-rendering. -->
-        <div class="content has-text-centered">
-          <img
-            src="./static/images/methodology.png"
-            alt="Methodology Diagram"
-            style="max-width: 100%; height: auto;"
-          />
-        </div>
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-    <!-- Reinforcement Learning -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reinforcement Learning</h2>
-        <div class="content">
-          <div class="columns is-centered">
-            <div class="column">
-              <h3 class="title is-4 has-text-centered">Training RL policy with Load Adaptation</h3>
-              <img src="static/videos/before_rl.gif" alt="Before RL" style="width: 100%; height: 400px; object-fit: cover;">
-            </div>
-            <div class="column">
-              <h3 class="title is-4 has-text-centered"> After RL policy with Load Adaptation </h3>
-              <img src="static/videos/after_rl.gif" alt="After RL" style="width: 100%; height: 400px; object-fit: cover;">
-            </div>
-          </div>
-          <h3 class="title is-4 has-text-centered">Sim to Sim and Sim to Real Transfer</h3>
-          <div class="content has-text-centered">
-            <img src="./static/images/RL_overview.png" alt="RL Overview" style="max-width: 100%; height: auto;">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Data Collection -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Data Collection</h2>
-        <div class="content">
-          <div class="content has-text-centered">
-            <img src="./static/images/data_collection_mask.png" alt="Data Collection" style="max-width: 100%; height: auto;">
-          </div>
-          
-          <h3 class="title is-4">Data Preprocessing</h3>
-          <p>Data preprocessing with SAM2 and using WHAM for identifying pose and velocity</p>
-          <img src="static/videos/output.gif" alt="Data Preprocessing" style="width: 100%; height: auto;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Real World Demonstrations -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Real World Demonstrations</h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/robot_full_images.jpg" alt="Robot Full Images" style="max-width: 100%; height: auto;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Evaluation -->
-    <div class="columns is-centered" style="margin-bottom: 3rem;">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Evaluation</h2>
-        <div class="content">
-          <div class="publication-video" style="margin-bottom: 2rem;">
-            <iframe
-              width="100%"             
-              height="450"             
-              src="https://www.youtube.com/embed/fmw2blkLM3U?autoplay=1&loop=1&playlist=fmw2blkLM3U"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-          
-          <div class="columns is-centered">
-            <div class="column">
-              <img src="./static/images/position_traj (2).png" alt="Position Tracking" style="max-width: 100%; height: auto;">
-              <p class="has-text-centered">Position tracking of the humanoid and human followers relative to the leader in both scenarios, along with the corresponding position error between the leader and each follower. Top: Motion along the x-axis. Bottom: Motion along the y-axis.</p>
-            </div>
-            <div class="column">
-              <img src="./static/images/vel_traj (2).png" alt="Velocity Tracking" style="max-width: 100%; height: auto;">
-              <p class="has-text-centered">Velocity error tracking between the leader and the corresponding humanoid or human follower in each case. Top: Tracking along the x-axis. Bottom: Tracking along the y-axis.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-
-    <!-- Comanipulation -->
-    <!-- <div class="columns is-centered" style="margin-bottom: 3rem;">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Comanipulation</h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/comanipulation.png" alt="Comanipulation" style="max-width: 100%; height: auto;">
-        </div>
-      </div>
-    </div>  -->
-
-
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{onsubmission,
-  author    = {},
-  title     = {H2-COMPACT: Human–Humanoid Co-Manipulation via Adaptive Contact Trajectory Policies},
-  journal   = {},
-  year      = {2025},
-}</code></pre>
-  </div>
-
-</section>
-
 
 <footer class="footer">
   <div class="container">
